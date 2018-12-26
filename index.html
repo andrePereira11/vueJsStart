@@ -8,6 +8,7 @@
   <body>
     <div id="app">
       <h1>{{titulo}}</h1>
+      <h2>Seja bem vindo {{usuario.profissao}} {{usuario.nome}}</h2>
     </div>
 
     <script src="https://unpkg.com/vue"></script>
@@ -15,7 +16,12 @@
       var app = new Vue({
         el:"#app",
         data:{
-          titulo:"Hello World"
+          titulo:"Hello World",
+          usuario:{
+            id:1,
+            nome: "André",
+            profissao:"Desenvolvedor de Sistemas"
+          }
         }
       });
     </script>
