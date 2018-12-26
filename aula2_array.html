@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Aprendendo VueJS</title>
+
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{titulo}}</h1>
+      <ul>
+        <li v-for="(iten,index) in linguagens">{{index + 1}} - {{iten.name}}</li>
+      </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      var app = new Vue({
+        el:"#app",
+        data:{
+          titulo:"Diretiva v-for e array",
+          linguagens:[
+            {name: "Javascript"},
+            {name: "Java"},
+            {name: "Ruby"}
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>
